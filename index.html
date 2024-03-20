@@ -19,7 +19,7 @@
         <li>Los Angeles, CA</li>
       </ul>
     </nav>
-    <a href="#">Get your tickets</a>
+    <a class="ticket-btn" href="#">Get your tickets</a>
   </header>
   <section class="main-info">
     <h1>A design conference for the dark side.</h1>
@@ -64,7 +64,7 @@
         </li>
       </ul>
     </div>
-    <div class="speakers">
+    <div class="speakers" id="speakers">
       <!-- <figure>
                 <img src="#" alt="">
                 <figcaption>
@@ -109,23 +109,27 @@
   <section class="sponsorship">
     <h1>Current sponsorships for our workshops and speakers.</h1>
     <div>
-      <img src="src/assets/transistor.a1e38d49.svg" alt="">
-      <img src="src/assets/tuple.2f54ed03.svg" alt="">
-      <img src="src/assets/statickit.2e06fcea.svg" alt="">
-      <img src="src/assets/mirage.e12f40ad.svg" alt="">
-      <img src="src/assets/laravel.6faebf7c.svg" alt="">
-      <img src="src/assets/statamic.923101b6.svg" alt="">
+      <div class="div-img"><img src="src/assets/transistor.a1e38d49.svg" alt=""/> </div>
+      <div class="div-img"><img src="src/assets/tuple.2f54ed03.svg" alt=""/> </div>
+      <div class="div-img"><img src="src/assets/statickit.2e06fcea.svg" alt=""/> </div>
+      <div class="div-img"><img src="src/assets/mirage.e12f40ad.svg" alt=""/> </div>
+      <div class="div-img"><img src="src/assets/laravel.6faebf7c.svg" alt=""/> </div>
+      <div class="div-img"><img src="src/assets/statamic.923101b6.svg" alt=""/> </div>
     </div>
   </section>
 
   <section class="subscribtion">
-    <div>
+    <div class="subscribtion-item">
       <h1>Stay up to date</h1>
       <p>Get updates on all of our events and be the first to get notified when tickets go on sale.</p>
     </div>
-    <div>
+    <div class="subscribtion-item">
       <h3>Sign up to our newsletter ↓</h3>
-      <input type="email">
+      <div class="input-wrapper">
+        <input type="email">
+        <button>Sign up today</button>
+      </div>
+      
     </div>
   </section>
 

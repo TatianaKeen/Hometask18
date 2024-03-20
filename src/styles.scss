@@ -9,7 +9,7 @@
 
 body {
     // display: flex;
-    width: 80%;
+    max-width: 1200px;
     // align-items: center;
     // text-align: center;
     margin-left: auto;
@@ -28,7 +28,20 @@ body {
 
         padding-top: 50px;
         .logo {
-            width: 150px;
+            width: 200px;
+        }
+        .ticket-btn {
+            color: #fff;
+            text-align: center;
+            background-color: #2563eb;
+            border-radius: 15px;
+            align-items: center;
+            width: 175px;
+            height: 60px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            font-weight: 600;
         }
     }
 
@@ -39,7 +52,7 @@ body {
         padding: 100px;
 
         h1 {
-            font-size: 52px;
+            font-size: 75px;
             padding-bottom: 40px;
         }
         
@@ -67,11 +80,20 @@ body {
     .speaker-wrap {
         display: flex;
         .calendar {
+            flex: 1;
             font-family: "Inter", sans-serif;
             h3 {
                 color: #1e3a8a;
             }
             
+        }
+        .speakers {
+            flex: 4;
+            display: flex;
+            flex-wrap: wrap;
+            figure {
+                width: 33%;
+            }
         }
     }
 
@@ -96,8 +118,43 @@ body {
         div {
             display: flex;
             flex-wrap: wrap;
-            img {
-                padding: 40px;
+            justify-content: center;
+            .div-img {
+                width: 33%;
+                img {
+                    padding: 40px;
+                }
+            }
+            
+        }
+    }
+    .subscribtion {
+        display: flex;
+        background-image: url("/src/assets/background.6c3571e0.jpg");
+        background-position: -15% 50%;
+        height: 500px;
+        border-radius: 50px;
+        .subscribtion-item {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+            font-size: 24px;
+            width: 50%;
+            .input-wrapper {
+                display: flex;
+                flex-direction: row;
+                background-color: #fff;
+                border-radius: 15px;
+                height: 70px;
+                width: 400px;
+                input {
+                    height: 20px;
+                }
+                button {
+                    height: 20px;
+                }
             }
         }
     }
