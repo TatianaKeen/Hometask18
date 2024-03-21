@@ -75,6 +75,7 @@ body {
         font-family: "DM Sans", sans-serif;
         width: 60%;
         color: #1e3a8a;
+        font-size: 23px;
     }
 
     .speaker-wrap {
@@ -82,17 +83,44 @@ body {
         .calendar {
             flex: 1;
             font-family: "Inter", sans-serif;
-            h3 {
-                color: #1e3a8a;
+            ul {
+
+                li {
+                    padding: 25px;
+                    span.active {
+                        color: #2563eb;
+                    }
+                    h3 {
+                        padding-top: 10px;
+                        color: #1e3a8a;
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
+           
             
         }
         .speakers {
             flex: 4;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             figure {
-                width: 33%;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+                img {
+                    // width: 70%;
+                    border-radius: 50px;
+                    background: linear-gradient(0deg, rgba(37,99,235,1) 0%, rgba(146,177,245,1) 25%, rgba(255,255,255,1) 100%);
+                    padding: 25px;
+                }
+                figcaption {
+                }
             }
         }
     }

@@ -1,7 +1,7 @@
 
 async function fetchSpeakersAndPopulate() {
   try {
-    const response = await fetch('https://dummyjson.com/users?limit=10');
+    const response = await fetch('https://dummyjson.com/users?limit=6');
     const data = await response.json();
     console.log(data.users);
 
