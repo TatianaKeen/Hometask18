@@ -175,11 +175,11 @@ body {
 
     .schedule {
         display: flex;
-        background-color: rgb(238 242 255);
+        // background-color: rgb(238 242 255);
 
         div {
             color: #1e3a8a;
-
+            margin: 50px 20px;
             h3 {
                 font-size: 26px;
             }
@@ -191,21 +191,54 @@ body {
             }
 
             ul {
+                background-color: rgba(255, 255, 255, 0.7);
+                margin-top: 30px;
+                text-align: center;
+                box-shadow: 10px 10px 20px rgba(211,217,253, 0.3);
+
                 li {
+                    padding: 40px 25px;
                     list-style: none;
+                    border-bottom: rgb(238 242 255) 1px solid;
+                    h4 {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    p {
+
+                        font-size: 15px;
+                    }
+                    span {
+                        color: gray;
+                        font-size: 15px;
+                    }
+                    
                 }
             }
         }
     }
 
     .sponsorship {
+        padding: 75px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        h1 {
+            max-width: 700px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 500;
+            color: #1e3a8a;
+            padding-bottom: 50px;
+        }
         div {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+           
 
             .div-img {
-                width: 33%;
+                width: 30%;
 
                 img {
                     padding: 40px;
@@ -219,7 +252,7 @@ body {
         display: flex;
         background-image: url("/src/assets/background.6c3571e0.jpg");
         background-position: -15% 50%;
-        height: 500px;
+        height: 400px;
         border-radius: 50px;
 
         .subscribtion-item {
@@ -230,6 +263,19 @@ body {
             padding: 50px;
             font-size: 24px;
             width: 50%;
+            color: #1e3a8a;
+            gap: 20px;
+
+            h1 {
+                font-size: 40px;
+                font-weight: 600;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 18px;
+            }
 
             .input-wrapper {
                 display: flex;
@@ -269,6 +315,18 @@ body {
                 }
 
             }
+        }
+    }
+    .footer {
+        display:flex;    
+        align-items: center;
+        justify-content: space-between;
+        padding: 75px 0;
+        img {
+            width: 200px;
+        }
+        span {
+            color: gray;
         }
     }
 }

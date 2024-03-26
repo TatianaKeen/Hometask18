@@ -44,7 +44,7 @@ async function fetchCalendarApril4() {
       listItem.appendChild(nameHeading);
 
       const companyPara = document.createElement('p');
-      companyPara.textContent = user.company.title + ' at ' + user.company.name;
+      companyPara.textContent = user.company.title;
       listItem.appendChild(companyPara);
 
       const phoneSpan = document.createElement('span');
@@ -75,7 +75,38 @@ async function fetchCalendarApril5() {
       listItem.appendChild(nameHeading);
 
       const companyPara = document.createElement('p');
-      companyPara.textContent = user.company.title + ' at ' + user.company.name;
+      companyPara.textContent = user.company.title;
+      listItem.appendChild(companyPara);
+
+      const phoneSpan = document.createElement('span');
+      phoneSpan.textContent = user.phone;
+      listItem.appendChild(phoneSpan);
+
+      scheduleContainer.appendChild(listItem);
+    });
+  } catch (error) {
+    console.error('Error fetching calendar:', error);
+  }
+}
+
+async function fetchCalendarApril6() {
+  try {
+    const response = await fetch('https://dummyjson.com/users?limit=4&skip=5');
+    const data = await response.json();
+    console.log(data.users);
+
+    const scheduleContainer = document.querySelector('.schedule > div.April6 > ul');
+    scheduleContainer.innerHTML = '';
+
+    data.users.forEach(function (user) {
+      const listItem = document.createElement('li');
+
+      const nameHeading = document.createElement('h4');
+      nameHeading.textContent = user.firstName + ' ' + user.lastName;
+      listItem.appendChild(nameHeading);
+
+      const companyPara = document.createElement('p');
+      companyPara.textContent = user.company.title;
       listItem.appendChild(companyPara);
 
       const phoneSpan = document.createElement('span');
@@ -96,3 +127,4 @@ async function fetchCalendarApril5() {
 fetchSpeakers();
 fetchCalendarApril4();
 fetchCalendarApril5();
+fetchCalendarApril6();
