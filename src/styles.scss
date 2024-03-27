@@ -34,6 +34,15 @@ body {
         .logo {
             width: 200px;
         }
+        ul {
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            li {
+                list-style: none;
+            }
+        }
 
         .ticket-btn {
             color: #fff;
