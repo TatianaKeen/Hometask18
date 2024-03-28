@@ -49,27 +49,26 @@ class Users extends Speakers {
 
   renderSpeakers(isPhoto, size) {
     console.log('renderSpeakers Users');
-    // const figure = document.createElement('figure');
-    // const img = document.createElement('img');
-    // img.src = this.image;
-    // const figcaption = document.createElement('figcaption');
-    // const h3 = document.createElement('h3');
-    // h3.textContent = this.firstName + ' ' + this.lastName;
-    // const p = document.createElement('p');
-    // p.textContent = this.company.title + ' at ' + this.company.name;
+    const figure = document.createElement('figure');
+    const img = document.createElement('img');
+    img.src = this.image;
+    const figcaption = document.createElement('figcaption');
+    const h3 = document.createElement('h3');
+    h3.textContent = this.firstName + ' ' + this.lastName;
+    const p = document.createElement('p');
+    p.textContent = this.title + ' at ' + this.name;
 
-    // figcaption.appendChild(h3);
-    // figcaption.appendChild(p);
-    // figure.appendChild(img);
-    // figure.appendChild(figcaption);
+    figcaption.appendChild(h3);
+    figcaption.appendChild(p);
+    figure.appendChild(img);
+    figure.appendChild(figcaption);
 
-    return [];
+    return figure;
   }
 }
 
 class Schedule extends Speakers {
-  constructor(){
-    super();}
+  constructor(){}
   
   renderSpeakers(isPhoto, size) {
     const scheduleContainer = document.querySelector(`.schedule > div.${this.date} > ul`);
@@ -104,7 +103,10 @@ class Schedule extends Speakers {
 
 
   const newUser = new Users();
-  const newDet = newUser.renderSpeakers(true, 1)
+  const newDet = newUser.renderSpeakers(true, 1);
+
+  const usersContainer = document.querySelector(`.speakers`);
+  usersContainer.appendChild(newDet)
 })();
 
 // class CalendarEvent {
