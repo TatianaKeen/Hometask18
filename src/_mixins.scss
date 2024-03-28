@@ -1,0 +1,10 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin background-image($image) {
+    background-image: $image;
+    background-position: -15% 50%;
+  }
