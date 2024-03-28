@@ -8,11 +8,13 @@ class Speakers {
   }
 
   async fetchSpeakers() {
+    console.log('fetchSpeakers');
     const response = await fetch('https://dummyjson.com/users?limit=6');
     return response.json()
   }
 
   normalizeData(users) {
+    console.log('normalizeData');
     this.users = users.map(user => {
       const { firstName, lastName, company: { title, name } } = user;
       return { firstName, lastName, title, name };
@@ -41,29 +43,33 @@ class Speakers {
 }
 
 class Users extends Speakers {
-  constructor(){}
+  constructor(){
+    super();
+  }
 
   renderSpeakers(isPhoto, size) {
-    const figure = document.createElement('figure');
-    const img = document.createElement('img');
-    img.src = this.image;
-    const figcaption = document.createElement('figcaption');
-    const h3 = document.createElement('h3');
-    h3.textContent = this.firstName + ' ' + this.lastName;
-    const p = document.createElement('p');
-    p.textContent = this.company.title + ' at ' + this.company.name;
+    console.log('renderSpeakers Users');
+    // const figure = document.createElement('figure');
+    // const img = document.createElement('img');
+    // img.src = this.image;
+    // const figcaption = document.createElement('figcaption');
+    // const h3 = document.createElement('h3');
+    // h3.textContent = this.firstName + ' ' + this.lastName;
+    // const p = document.createElement('p');
+    // p.textContent = this.company.title + ' at ' + this.company.name;
 
-    figcaption.appendChild(h3);
-    figcaption.appendChild(p);
-    figure.appendChild(img);
-    figure.appendChild(figcaption);
+    // figcaption.appendChild(h3);
+    // figcaption.appendChild(p);
+    // figure.appendChild(img);
+    // figure.appendChild(figcaption);
 
-    return figure;
+    return [];
   }
 }
 
 class Schedule extends Speakers {
-  constructor(){}
+  constructor(){
+    super();}
   
   renderSpeakers(isPhoto, size) {
     const scheduleContainer = document.querySelector(`.schedule > div.${this.date} > ul`);
@@ -90,10 +96,15 @@ class Schedule extends Speakers {
 }
 
 
+
 (async () => {
   const person = new Speakers();
   const data = await person.fetchSpeakers();
   person.normalizeData(data.users);
+
+
+  const newUser = new Users();
+  const newDet = newUser.renderSpeakers(true, 1)
 })();
 
 // class CalendarEvent {
